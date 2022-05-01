@@ -26,15 +26,7 @@
 </div>
 <script>
 var video = document.querySelector("#videoElement");
-async function getMedia(constraints) {
-  let stream = null;
 
-  try {
-    stream = await navigator.mediaDevices.getUserMedia(constraints);
-    /* use the stream */
-  } catch(err) {
-    /* handle the error */
-  }
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(function (stream) {
