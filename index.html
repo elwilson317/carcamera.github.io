@@ -26,7 +26,7 @@
 </div>
 <script>
 var video = document.querySelector("#videoElement");
-
+<uses-permission android:name="android.permission.CAMERA" />
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(function (stream) {
@@ -35,7 +35,9 @@ if (navigator.mediaDevices.getUserMedia) {
     .catch(function (err0r) {
       console.log("Something went wrong!");
     });
+
 }
+	
 </script>
 </body>
 </html>
